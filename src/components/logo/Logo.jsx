@@ -1,5 +1,5 @@
 import React from 'react';
-import  { ReactComponent as StudenTLogo} from '../../../public/logo/StudenTLogo.svg';
+import  { ReactComponent as StudenTLogo} from './assets/logo/logo/StudenTLogo.svg';
 
 
 

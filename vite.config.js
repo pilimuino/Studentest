@@ -12,7 +12,6 @@ export default {
     globals: true,
       environment: 'jsdom',
       setupFiles: './src/setupTests.js',  // Si tienes algún archivo de configuración
-      exclude: [...configDefaults.exclude, 'e2e/*'],
   },
 }
 
