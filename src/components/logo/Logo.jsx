@@ -1,5 +1,5 @@
 import React from 'react';
-import  { ReactComponent as StudenTLogo} from './assets/logo/logo/StudenTLogo.svg';
+import  StudentLogo from '@/assets/logo/logo/1.png';
 
 
 
@@ -7,7 +7,9 @@ import  { ReactComponent as StudenTLogo} from './assets/logo/logo/StudenTLogo.sv
 const Logo = ({ alt = 'StudenTLogo' }) => {
   return (
     <div className="max-w-sm mx-auto border-0 rounded-lg overflow-hidden shadow-none p-0">
-      <StudenTLogo 
+      <img 
+        src={StudentLogo} 
+        alt={alt} 
         className="w-full h-auto object-cover rounded-lg border-0 shadow-none" 
         aria-labelledby="logo-description"
       />

@@ -1,12 +1,13 @@
+const tailwindcssAnimate = require('tailwindcss-animate');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'], 
   content: [
-    './src/**/*.{js,jsx,ts,tsx}', 
-    './pages/**/*.{js,jsx,ts,tsx}',
-    './components/**/*.{js,jsx,ts,tsx}',
-    './app/**/*.{js,jsx,ts,tsx}',
+    './index.html',
+    './src/**/*.{js,jsx,ts,tsx}',  // Incluye todas las subcarpetas y archivos en src
   ],
+  
   theme: {
     extend: {
       colors: {
@@ -36,6 +37,9 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+      fontFamily: {
+        'cabin-condensed': ['"Cabin Condensed"', 'sans-serif'],
       },
     },
   },
