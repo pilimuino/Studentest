@@ -1,10 +1,11 @@
 import React from 'react'
+import DocumentsSection from '@/components/document/DocumentSection';
 
 
 const Questiontest = () => {
     return (
         <div>
-            <h1>Questiontest</h1>
+            <DocumentsSection/>
         </div>
     )
 }
