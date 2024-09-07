@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { FiX } from 'react-icons/fi'; 
+import {Link} from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -20,10 +21,10 @@ const Footer = () => {
                         <h2 className="text-[#a6a6a6] font-semibold mb-2">Pages</h2>
                         <ul className="text-xs text-[#a6a6a6] space-y-1">
                             <li>
-                                <a href="#" className="hover:text-[#068ca4]">Service</a>
+                                <Link to="/service" className="hover:text-[#068ca4]">Service</Link>
                             </li>
                             <li>
-                                <a href="#" className="hover:text-[#068ca4]">Contact</a>
+                                <Link to="/contact" className="hover:text-[#068ca4]">Contact</Link>
                             </li>
                         </ul>
                     </div>
@@ -31,21 +32,21 @@ const Footer = () => {
                     <div className="flex flex-col md:items-start md:w-1/3 md:pl-8">
                         <h2 className="text-[#a6a6a6] font-semibold mb-2">Follow us</h2>
                         <div className="flex space-x-4 mb-4">
-                            <a href="#" aria-label="Facebook" className="text-[#a6a6a6] hover:text-[#068ca4]">
+                            <Link to="/facebook" aria-label="Facebook" className="text-[#a6a6a6] hover:text-[#068ca4]">
                                 <FaFacebook size={20} />
-                            </a>
-                            <a href="#" aria-label="Instagram" className="text-[#a6a6a6] hover:text-[#068ca4]">
+                            </Link>
+                            <Link to="/instagram" aria-label="Instagram" className="text-[#a6a6a6] hover:text-[#068ca4]">
                                 <FaInstagram size={20} />
-                            </a>
-                            <a href="#" aria-label="X" className="text-[#a6a6a6] hover:text-[#068ca4]">
+                            </Link>
+                            <Link to="x" aria-label="X" className="text-[#a6a6a6] hover:text-[#068ca4]">
                                 <FiX size={20} /> 
-                            </a>
-                            <a href="#" aria-label="LinkedIn" className="text-[#a6a6a6] hover:text-[#068ca4]">
+                            </Link>
+                            <Link to="/linkedin" aria-label="LinkedIn" className="text-[#a6a6a6] hover:text-[#068ca4]">
                                 <FaLinkedin size={20} />
-                            </a>
-                            <a href="#" aria-label="YouTube" className="text-[#a6a6a6] hover:text-[#068ca4]">
+                            </Link>
+                            <Link to="/youtube" aria-label="YouTube" className="text-[#a6a6a6] hover:text-[#068ca4]">
                                 <FaYoutube size={20} />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -55,9 +56,9 @@ const Footer = () => {
                 <div className="mt-4">
                     <p className="text-xs text-[#a6a6a6]">
                         © 2024 Studentest - 
-                        <a href="#" className="hover:text-[#068ca4] ml-1">Privacy</a> / 
-                        <a href="#" className="hover:text-[#068ca4] ml-1">Cookies</a> / 
-                        <a href="#" className="hover:text-[#068ca4] ml-1">Terms of use</a>
+                        <Link to="/privacy" className="hover:text-[#068ca4] ml-1">Privacy</Link> / 
+                        <Link to="/cookies" className="hover:text-[#068ca4] ml-1">Cookies</Link> / 
+                        <Link to="/termsofuse" className="hover:text-[#068ca4] ml-1">Terms of use</Link>
                     </p>
                 </div>
             </div>

@@ -1,16 +1,27 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import HomeComponent from '@/components/home/HomeComponent';
+import { BrowserRouter } from 'react-router-dom'; 
+import Home from '@/components/home/HomeComponent';
 
-describe('Home Component', () => {
-    test('renders correctly with background image and content', () => {
-    render(<HomeComponent />);
-    
-    const heading = screen.getByText(/Create tests with AI/i);
-    expect(heading).toBeInTheDocument();
+describe('Home', () => {
+    it('renders correctly with background image, heading, and button', () => {
+        render(
+            <BrowserRouter>
+                <Home />
+            </BrowserRouter>
+        );
 
-    const button = screen.getByRole('button'); 
-    expect(button).toBeInTheDocument();
+    const backgroundElement = screen.getByTestId('home-background');
+    expect(backgroundElement).toBeInTheDocument();
+
+    const styles = getComputedStyle(backgroundElement);
+    expect(styles.backgroundImage).toMatch(/fotoportada/);
+
+    const headingElement = screen.getByRole('heading', { name: /Create tests with AI/i });
+    expect(headingElement).toBeInTheDocument();
+
+    const buttonElement = screen.getByRole('button', { name: /Student Test/i });
+    expect(buttonElement).toBeInTheDocument();
     });
 });

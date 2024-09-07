@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <nav className="bg-white border-10 border-gray-300 shadow-lg rounded-lg">
             <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-4">
-                <div className="flex justify-between items-center h-16">
+                <div className="flex justify-between items-center h-20">
                     <div className="flex-shrink-0 flex items-center">
                         <Link to="/" className="flex items-center">
                             <Logo alt="StudenTLogo" />

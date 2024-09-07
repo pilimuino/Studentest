@@ -6,21 +6,33 @@ import Footer from '@/components/footer/Footer';
 
 describe('Footer', () => {
     it('renders the About section', () => {
-        render(<Footer />);
+        render(
+            <BrowserRouter>
+                <Footer />
+            </BrowserRouter>
+        );
         
         expect(screen.getByText(/About STUDENTEST/i)).toBeInTheDocument();
         expect(screen.getByText(/Studentest is a platform based on Artificial Intelligence/i)).toBeInTheDocument();
     });
 
     it('renders the Pages section with links', () => {
-        render(<Footer />);
+        render(
+            <BrowserRouter>
+                <Footer />
+            </BrowserRouter>
+        );
         
         expect(screen.getByText(/Service/i)).toBeInTheDocument();
         expect(screen.getByText(/Contact/i)).toBeInTheDocument();
     });
 
     it('renders the Follow Us section with social media icons', () => {
-        render(<Footer />);
+        render(
+            <BrowserRouter>
+                <Footer />
+            </BrowserRouter>
+        );
 
         expect(screen.getByLabelText(/Facebook/i)).toBeInTheDocument();
         expect(screen.getByLabelText(/Instagram/i)).toBeInTheDocument();
@@ -30,7 +42,11 @@ describe('Footer', () => {
     });
 
     it('renders the footer links at the bottom', () => {
-        render(<Footer />);
+        render(
+            <BrowserRouter>
+                <Footer />
+            </BrowserRouter>
+        );
         
         expect(screen.getByText(/Privacy/i)).toBeInTheDocument();
         expect(screen.getByText(/Cookies/i)).toBeInTheDocument();
