@@ -3,7 +3,7 @@ import React from 'react'
 
 const Cookies = () => {
     return (
-        <div>
+        <div className="mx-4 md:mx-19">
             <h1 className="text-xl font-bold md:mt-10 text-[#a6a6a6]">COOKIES POLICY</h1>
             <div className="mb-6 md:mb-2 md:mt-3  md:w md:pr-13">
                 <h2 className="text-l font-bold md:mt-3 text-[#a6a6a6]">WHAT ARE COOKIES?</h2>

@@ -3,7 +3,7 @@ import React from 'react'
 
 const TermsOfUse = () => {
     return (
-        <div>
+        <div className="mx-4 md:mx-19">
             <h1 className="text-xl font-bold md:mt-10 text-[#a6a6a6]">OUR TERMS AND CONDITIONS</h1>
                 <h2 className="text-xl font-bold md:mt-3 text-[#a6a6a6]">THANK YOU FOR CHOOSING Studentest</h2>
                     <p className='text-l md:mt-2 text-[#a6a6a6]'>
