@@ -10,18 +10,18 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between">
                 
                     <div className="mb-6 md:mb-0 md:w-1/3 md:pr-12">
-                        <h2 className="text-[#a6a6a6] font-semibold mb-2">About STUDENTEST</h2>
-                        <p className="text-xs text-[#a6a6a6]">
+                        <h2 className="text-[#a6a6a6] text-lg font-bold mb-2">About STUDENTEST</h2>
+                        <p className="text-lg text-[#a6a6a6]">
                             Studentest is a platform based on Artificial Intelligence to create tests automatically.
                             Thanks to algorithms, you can create multiple choice tests that are always different but homogeneous in difficulty and content. In just one click!
                         </p>
                     </div>
 
                     <div className="mb-6 md:mb-0 md:w-1/3 md:px-14">
-                        <h2 className="text-[#a6a6a6] font-semibold mb-2">Pages</h2>
-                        <ul className="text-xs text-[#a6a6a6] space-y-1">
+                        <h2 className="text-[#a6a6a6] text-lg font-bold mb-2">Pages</h2>
+                        <ul className="text-lg text-[#a6a6a6] space-y-1">
                             <li>
-                                <Link to="/service" className="hover:text-[#068ca4]">Service</Link>
+                                <Link to="/service" className="hover:text-[#068ca4]">Services</Link>
                             </li>
                             <li>
                                 <Link to="/contact" className="hover:text-[#068ca4]">Contact</Link>
@@ -30,7 +30,7 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col md:items-start md:w-1/3 md:pl-8">
-                        <h2 className="text-[#a6a6a6] font-semibold mb-2">Follow us</h2>
+                        <h2 className="text-[#a6a6a6] text-lg font-bold mb-2">Follow us</h2>
                         <div className="flex space-x-4 mb-4">
                             <Link to="/facebook" aria-label="Facebook" className="text-[#a6a6a6] hover:text-[#068ca4]">
                                 <FaFacebook size={20} />

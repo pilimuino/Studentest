@@ -3,10 +3,10 @@ import React from 'react'
 
 const Privacy = () => {
     return (
-        <div>
+        <div className="mx-4 md:mx-19">
             <h1 className="text-xl font-bold md:mt-10 text-[#a6a6a6]">PRIVACY</h1>
             <h2 className='text-l font-semibold md:mt-3 text-[#a6a6a6]'>PRIVACY POLICIES:</h2>
-            <div className="mb-6 md:mb-2 md:w md:mt-2  md:pr-13">
+            <div className="mb-6 md:mb-2 md:w md:mt-2 md:pr-13">
                 <p className='text-l text-[#a6a6a6]'>Studentest respects current legislation on personal data protection, user privacy and the confidentiality and security of personal data, in accordance with the provisions of the new General Data Protection Regulation (EU Regulation 2016/679), adopting the necessary technical and organizational measures to prevent the loss, misuse, alteration, unauthorized access and theft of the personal data provided, taking into account the state of technology, the nature of the data and the risks to which they are exposed.
                 By registering a user account, the user gives his or her consent to Studentest to process his or her personal data in accordance with Spanish legislation. All the information we collect is related to providing our services.
                 Studentest will update this Data Protection Policy occasionally and in response to requirements arising from legal, regulatory or operational changes. 
