@@ -7,6 +7,8 @@ import Privacy from '@/pages/Privacy';
 import Questiontest from '@/pages/Questiontest';
 import Service from '@/pages/Service';
 import TermsOfUse from '@/pages/TermsOfUse';
+import Login from '@/pages/Login';
+
 
 
 const router = createBrowserRouter([
@@ -43,8 +45,8 @@ const router = createBrowserRouter([
                 element: <TermsOfUse />,
             },
             {
-                path: '/*',
-                element: <Home />, 
+                path: '/login',
+                element: <Login />, 
             },
         ],
     },
