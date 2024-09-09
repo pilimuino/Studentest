@@ -8,6 +8,7 @@ import Questiontest from '@/pages/Questiontest';
 import Service from '@/pages/Service';
 import TermsOfUse from '@/pages/TermsOfUse';
 import Login from '@/pages/Login';
+import SignUp from '@/pages/SignUp';
 
 
 
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login />, 
+            },
+            {
+                path: '/signup',
+                element: <SignUp/>, 
             },
         ],
     },
