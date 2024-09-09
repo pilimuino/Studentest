@@ -69,6 +69,13 @@ const LoginComponent = () => {
                         />
                     </div> 
                     <button
+                        type="submit"
+                        className="w-full p-4 mt-4 text-gray-400 border border-gray-400 rounded shadow-xl hover:bg-secondary hover:text-white focus:outline-none"
+                        style={{ height: '50px' }}
+                    >
+                        Save Changes
+                    </button>
+                    <button
                         type="button"
                         onClick={handleDeleteAccount}
                         className="w-full p-4 mt-4 text-gray-400 border border-gray-400 rounded shadow-xl hover:bg-red-500 hover:text-white focus:outline-none"
