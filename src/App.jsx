@@ -9,6 +9,9 @@ import Privacy from '@/pages/Privacy';
 import Questiontest from '@/pages/Questiontest';
 import Service from '@/pages/Service';
 import TermsOfUse from '@/pages/TermsOfUse';
+import Login from '@/pages/Login';
+import SignUp from '@/pages/SignUp';
+
 
 
 const App = () =>{
@@ -22,6 +25,8 @@ const App = () =>{
           <Route path='/quetionstest' element={<Questiontest/>} />
           <Route path='/service' element={<Service/>} />
           <Route path='/termsofuse' element={<TermsOfUse/>} />
+          <Route path='/login' element={<Login/>} />
+          <Route path='/signup' element={<SignUp/>} />
         </Routes>
     </Layout>
   );

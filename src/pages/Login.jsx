@@ -1,10 +1,10 @@
 import React from 'react'
-import Construction from '@/components/underconstruction/Construction'
+import LoginComponent from '@/components/login/LoginComponent'
 
 const Login = () => {
     return (
         <div>
-            <Construction/>
+            <LoginComponent/>
         </div>
     )
 }

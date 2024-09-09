@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const DocumentsSection = () => {
     const [selectedFile, setSelectedFile] = useState(null);
+    const [questions, setQuestions] = useState([]);
     const fileInputRef = useRef(null);
 
     const handleFileChange = (event) => {
@@ -30,6 +31,30 @@ const DocumentsSection = () => {
         } catch (error) {
             console.error('Error uploading file', error);
             alert('Error uploading file. Please try again.');
+        }
+    };
+
+    const handleCreateTest = async () => {
+        if (!selectedFile) {
+            alert('Please select a document first.');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('file', selectedFile);
+
+        try {
+            const response = await axios.post('/generate-test', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+
+            // Maneja la respuesta para mostrar las preguntas generadas
+            setQuestions(response.data.questions);
+        } catch (error) {
+            console.error('Error generating test', error);
+            alert('Error generating test. Please try again.');
         }
     };
 
@@ -81,8 +106,20 @@ const DocumentsSection = () => {
                     
                 <h1 className="text-gray-400 mb-4">Your recent tests</h1>
                 <div className="flex justify-end items-center z-10">
-                    <CreateButton />
+                    <CreateButton onClick={handleCreateTest} />
                 </div>
+                {/* Mostrar preguntas generadas */}
+                {questions.length > 0 && (
+                    <div className="mt-6">
+                        <h2 className="text-lg font-bold mb-2">Generated Questions</h2>
+                        {questions.map((question, index) => (
+                            <div key={index} className="p-4 mb-4 border border-gray-200 rounded">
+                                <p>{question.text}</p>
+                                {/* Aquí podrías agregar opciones de respuesta */}
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     );
