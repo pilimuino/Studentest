@@ -12,7 +12,7 @@ describe('UploadButton', () => {
         </BrowserRouter>
         );
 
-    const uploadbuttonElement = screen.getByRole('button', { name: /Upload document/i });
+    const uploadbuttonElement = screen.getByRole('button', { name: /Select document/i });
     expect(uploadbuttonElement).toBeInTheDocument();
 
     expect(uploadbuttonElement).toHaveClass('bg-white');
