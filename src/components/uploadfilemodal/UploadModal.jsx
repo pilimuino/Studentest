@@ -12,7 +12,7 @@ const UploadModal = ({ isOpen, onClose, onFileSelect, onUpload }) => {
     const onDrop = useCallback((acceptedFiles) => {
         if (acceptedFiles && acceptedFiles.length > 0) {
             const file = acceptedFiles[0];
-            if (file.size > 10 * 1024 * 1024) { // 10MB limit
+            if (file.size > 10 * 1024 * 1024) {
                 toast.error('File size should not exceed 10MB');
                 return;
             }
