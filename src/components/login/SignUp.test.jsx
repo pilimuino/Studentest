@@ -72,6 +72,6 @@ describe('SignUpComponent', () => {
         const loginLink = screen.getByText(/Login/i);
 
         expect(loginLink).toBeInTheDocument();
-        expect(loginLink).toHaveAttribute('href', '/');
+        expect(loginLink).toHaveAttribute('href', '/login');
     });
 });
