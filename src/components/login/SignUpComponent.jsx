@@ -1,17 +1,57 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import {Link} from 'react-router-dom';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+
 const SignUpComponent = () => {
+    const navigate = useNavigate();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
-    const handleSignUp = (e) => {
+    const handleSaveSubmit = (e) => {
         e.preventDefault();
+        console.log('Saved submit:', { firstName, lastName, email, password });
+        alert('Submit saved successfully!');
+    };
+
+    const handleSignUp = async (e) => {
+        e.preventDefault();
+
         console.log('User signed up:', { firstName, lastName, email, password });
-        alert('Account created successfully!');
+
+        if (!first_name || !last_name || !email || !password || !rp || !school) {
+            alert("Please. complete all fields.");
+            return;
+        }
+
+        try {
+            const response = await axios.post(`${API_BASE_URL}/api/users/create_user/`, {
+                first_name,
+                last_name,
+                email,
+                password,
+            });  
+            
+            if (response.status === 201) {
+                const data = response.data;
+                localStorage.setItem('authToken', data.token);
+                localStorage.setItem('userName', first_name);
+                localStorage.setItem('userLastName', last_name);
+                localStorage.setItem('userEmail', email);
+                alert('Account created successfully!');
+                navigate("/login");
+            } else {
+                alert("Error: " + response.data.message);
+            }
+        } catch (error) {
+            console.error("Error during registration:", error.response.data);
+            alert("An error occurred: " + error.response.data.error || "Please, try again later!");
+        }    
     };
 
     return (
@@ -66,6 +106,7 @@ const SignUpComponent = () => {
                     </div>
                     <button
                         type="submit"
+                        onClick={handleSaveSubmit} 
                         className="w-full p-4 mt-4 text-gray-400 bg-white border border-gray-400 rounded shadow-xl hover:bg-secondary hover:text-white focus:outline-none"
                         style={{ height: '50px' }}
                     >
@@ -74,7 +115,7 @@ const SignUpComponent = () => {
                 </form>
                 <div className="mt-4 text-gray-400 text-center">
                     <span>Already have an account? </span>
-                    <Link to="/" className="text-gray-400 hover:text-secondary text-bold hover:underline">
+                    <Link to="/login" className="text-gray-400 hover:text-secondary text-bold hover:underline">
                         Login
                     </Link>
                     </div>
